@@ -1,0 +1,60 @@
+.browser-wrapper {
+  text-align: center;
+  margin: 3rem 0; }
+
+.browser-frame {
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 1px solid #ddd; }
+  .browser-frame .btoolbar {
+    height: 40px;
+    background: #eee;
+    color: #bbb;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    border-bottom: 1px solid #ddd; }
+  .browser-frame .btoolbar-button {
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 100%;
+    top: 13px;
+    left: 15px; }
+    .browser-frame .btoolbar-button.button-2 {
+      left: 35px; }
+    .browser-frame .btoolbar-button.button-3 {
+      left: 55px; }
+  .browser-frame .btoolbar-address {
+    position: absolute;
+    text-align: left;
+    top: 5px;
+    left: 84px;
+    right: 84px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #e9e9e9;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    white-space: nowrap; }
+    .browser-frame .btoolbar-address em {
+      padding-left: 0.5rem;
+      font-style: normal;
+      font-size: 90%; }
+  .browser-frame .btoolbar-action {
+    position: absolute;
+    right: 15px;
+    top: 7px; }
+  .browser-frame .bbody p {
+    margin: 1.7rem 0; }
+  .browser-frame .bbody > p > img:first-child {
+    margin: -1.7rem 0 !important; }
+  .browser-frame .bbody img {
+    padding: 0 !important;
+    border-radius: 0 0 4px 4px;
+    display: block; }
+
+/*# sourceMappingURL=ui-browser.css.map */

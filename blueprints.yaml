@@ -1,0 +1,38 @@
+name: Shortcode UI
+version: 1.0.0
+description: "This plugin provides several UI shortcodes"
+icon: code
+author:
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-plugin-shortcode-ui
+demo: http://learn.getgrav.org
+keywords: gui, plugin, tabs
+bugs: https://github.com/getgrav/grav-plugin-shortcode-ui/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin Enabled
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    theme.tabs:
+      type: select
+      size: small
+      classes: fancy
+      label: Tabs Theme
+      default: "jS M Y"
+      options:
+          default: Default
+          lite: Lite
+          badges: Badges

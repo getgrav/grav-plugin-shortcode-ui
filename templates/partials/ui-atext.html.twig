@@ -1,0 +1,10 @@
+<{{ element }} class="cd-headline {{ animation }}">
+<span>{{ content[0] }}</span>
+<span class="cd-words-wrapper {{ wrapper_extra }}">
+    {% for word in words %}
+        {% set is_visible = visible == loop.index ? 'class="is-visible"' : '' %}
+        <b {{ is_visible }}>{{ word }}</b>
+    {% endfor %}
+</span>
+<span>{{ content[1] }}</span>
+</{{ element }}>

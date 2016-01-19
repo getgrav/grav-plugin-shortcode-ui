@@ -1,0 +1,232 @@
+// Variables
+$desktop-container: 60.000em !default;
+$tablet-container: 48.000em !default;
+.tabs-wrapper {
+    margin: 3rem 0;
+
+    display: block;
+    clear: both;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    .tabs-nav {
+        padding: 0;
+        margin: 0;
+
+
+        > li {
+            display: inline-block;
+            a {
+                display: inline-block;
+                padding: 0.5rem 1.5rem;
+                text-decoration: none;
+                @media screen and (max-width: $tablet-container) {
+                    font-size: 90%;
+                    padding: 0.3rem .5rem;
+                }
+                @media screen and (min-width: $desktop-container) {
+                    padding: 0.70rem 2.5rem;
+                }
+            }
+            &.current {
+                a {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    &.top-left, &.bottom-left {
+        .tabs-nav {
+            text-align: left;
+        }
+    }
+
+    &.top-right, &.bottom-right {
+        .tabs-nav {
+            text-align: right;
+        }
+    }
+
+    &.bottom-right, &.bottom-left {
+        .tabs-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3rem;
+        }
+        padding-bottom: 3rem;
+    }
+
+    .tabs {
+        margin-bottom: -1px;
+    }
+
+    .tab {
+        margin-top: -1px;
+        display: none;
+
+        padding: 0.5rem 1.5rem;
+
+        @media screen and (max-width: $tablet-container) {
+            font-size: 90%;
+            padding: 0.5rem;
+        }
+        &:first-child {
+            display: block;
+        }
+
+        > div {
+
+        }
+    }
+    // Default Theme
+    &.ui-theme-default {
+        $main-bg: #ffffff;
+        $border-color: #e9e9e9;
+        .tabs-nav {
+            li {
+                a {
+                    background-color: darken($main-bg, 2%);
+                    border: 1px solid $border-color;
+                    &:hover {
+                        background: darken($main-bg, 4%);
+                    }
+                }
+                &.current {
+                    a {
+                        background-color: $main-bg;
+                        border-bottom: 1px solid $main-bg;
+                    }
+                }
+            }
+        }
+
+        &.bottom-right, &.bottom-left {
+            .tabs-nav {
+                li {
+                    &.current {
+                        a {
+                            border-top: 1px solid $main-bg;
+                            border-bottom: 1px solid $border-color;
+                        }
+                    }
+                }
+            }
+        }
+        .tab {
+            border: 1px solid $border-color;
+            background-color: $main-bg;
+        }
+    }
+    // Badges Theme
+    &.ui-theme-badges {
+        $main-bg: #f9f9f9;
+        $border-color: darken($main-bg, 3%);
+        $badge-default: darken($main-bg,5%);
+        $badge-active: #666;
+        $badge-text: #fff;
+
+        background: $main-bg;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+
+        .tabs-nav {
+
+            margin: 0.5rem;
+
+            .tabs {
+                padding: 0.5rem;
+            }
+
+            li {
+
+                a {
+                    color: darken($main-bg,50%);
+                    background: $badge-default;
+                    padding: 0.1rem 1rem;
+                    border-radius: 4px;
+
+                    &:hover {
+                        background: darken($badge-default, 8%);
+                    }
+                }
+                &.current {
+                    a {
+                        color: $badge-text;
+                        background-color: $badge-active;
+                    }
+                }
+            }
+        }
+
+        &.bottom-left, &.bottom-right {
+            .tabs-nav {
+                margin: 0 0.5rem;
+
+                li {
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+        }
+    }
+
+    // Lite Theme
+    &.ui-theme-lite {
+        $main-bg: #ffffff;
+        $border-color: #e9e9e9;
+        .tabs-nav {
+            li {
+                &.current {
+                    a {
+                        font-weight: bold;
+                        border-bottom: 1px solid darken($border-color, 35%);
+                    }
+                }
+                &:hover {
+                    background: darken($main-bg, 4%);
+                }
+            }
+
+        }
+
+        &.bottom-right, &.bottom-left {
+            .tabs-nav {
+                li {
+                    &.current {
+                        a {
+                            border-bottom: 0;
+                            border-top: 1px solid darken($border-color, 35%);
+                        }
+                    }
+                }
+            }
+
+            .tab {
+                border-top: 0;
+                border-bottom: 1px solid $border-color;
+            }
+        }
+
+        .tab {
+            border-top: 1px solid $border-color;
+            background-color: $main-bg;
+
+            padding: 0.5rem 0;
+            @media screen and (max-width: $tablet-container) {
+                padding: 0.5rem 0;
+            }
+
+            > div {
+
+            }
+        }
+    }
+}

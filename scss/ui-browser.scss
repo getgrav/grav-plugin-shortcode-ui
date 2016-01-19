@@ -1,0 +1,95 @@
+$border-color: #ddd;
+$toolbar-bg: #eee;
+$toolbar-fg: #bbb;
+$address-bg: #fff;
+$border-radius: 4px;
+$toolbar-height: 40px;
+$button-indent: 15px;
+$button-size: 12px;
+$button-space: 8px;
+
+.browser-wrapper {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.browser-frame {
+    margin: 0 auto;
+    display: inline-block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+
+    .btoolbar {
+        height: $toolbar-height;
+        background: $toolbar-bg;
+        color: $toolbar-fg;
+        border-radius: $border-radius $border-radius 0 0;
+        position: relative;
+        border-bottom: 1px solid $border-color;
+    }
+
+    .btoolbar-button {
+        position: absolute;
+        display: block;
+        width: $button-size;
+        height: $button-size;
+        background: $toolbar-fg;
+        border-radius: 100%;
+        top: 13px;
+        left: $button-indent;
+
+        &.button-2 {
+            left: $button-indent + $button-size + $button-space;
+        }
+
+        &.button-3 {
+            left: $button-indent + 2*$button-size + 2*$button-space;
+        }
+    }
+
+    .btoolbar-address {
+        position: absolute;
+        text-align: left;
+        top: 5px;
+        left: 7*$button-size;
+        right: 7*$button-size;
+        background: $address-bg;
+        border-radius: $border-radius;
+        border: 1px solid darken($toolbar-bg,2%);
+        padding: 0 0.5rem;
+        overflow: hidden;
+        white-space: nowrap;
+
+        em {
+            padding-left: 0.5rem;
+            font-style: normal;
+            font-size: 90%;
+        }
+    }
+
+    .btoolbar-action {
+        position: absolute;
+        right: $button-indent;
+        top: 7px;
+
+    }
+
+
+    .bbody {
+
+        p {
+            margin: 1.7rem 0;
+        }
+
+        > p > img:first-child {
+            margin: -1.7rem 0 !important;
+        }
+
+        img {
+            padding: 0 !important;
+            border-radius: 0 0 $border-radius $border-radius;
+            display:block;
+        }
+    }
+}
