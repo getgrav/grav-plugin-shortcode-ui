@@ -8,7 +8,7 @@ author:
   url: http://getgrav.org
 homepage: https://github.com/getgrav/grav-plugin-shortcode-ui
 demo: http://learn.getgrav.org
-keywords: gui, plugin, tabs
+keywords: ui, plugin, tabs
 bugs: https://github.com/getgrav/grav-plugin-shortcode-ui/issues
 license: MIT
 
@@ -31,7 +31,7 @@ form:
       size: small
       classes: fancy
       label: Tabs Theme
-      default: "jS M Y"
+      default: default
       options:
           default: Default
           lite: Lite
