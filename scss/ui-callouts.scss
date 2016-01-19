@@ -1,0 +1,194 @@
+@mixin rt-arrow-top($arrowWidth: 5px, $arrowColor: $black, $arrowOffset: 0, $arrowPosition: 50%) {
+    bottom: $arrowOffset;
+    left: $arrowPosition;
+    margin-left: -$arrowWidth;
+    border-left: $arrowWidth solid transparent;
+    border-right: $arrowWidth solid transparent;
+    border-top: $arrowWidth solid $arrowColor;
+}
+@mixin rt-arrow-right($arrowWidth: 5px, $arrowColor: $black, $arrowOffset: 0, $arrowPosition: 50%) {
+    top: $arrowPosition;
+    right: -$arrowOffset;
+    margin-top: -$arrowWidth;
+    border-top: $arrowWidth solid transparent;
+    border-bottom: $arrowWidth solid transparent;
+    border-left: $arrowWidth solid $arrowColor;
+}
+@mixin rt-arrow-bottom($arrowWidth: 5px, $arrowColor: $black, $arrowOffset: 0, $arrowPosition: 50%) {
+    top: -$arrowOffset;
+    left: $arrowPosition;
+    margin-left: -$arrowWidth - 1;
+    border-left: $arrowWidth solid transparent;
+    border-right: $arrowWidth solid transparent;
+    border-bottom: $arrowWidth solid $arrowColor;
+}
+@mixin rt-arrow-left($arrowWidth: 5px, $arrowColor: $black, $arrowOffset: 0, $arrowPosition: 50%) {
+    top: $arrowPosition;
+    left: -$arrowOffset;
+    margin-top: -$arrowWidth;
+    border-top: $arrowWidth solid transparent;
+    border-bottom: $arrowWidth solid transparent;
+    border-right: $arrowWidth solid $arrowColor;
+}
+
+// CSS Square and Sizing
+@mixin rt-size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin rt-square($size) {
+    @include rt-size($size, $size);
+}
+
+.callouts {
+    text-align: center;
+
+    dt {
+        position: relative;
+        text-align: center;
+        display: inline-block;
+
+        > p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.callout-item {
+    position: absolute;
+}
+
+.callout-marker {
+    font-family: helvetica, arial, sans-serif;
+    font-weight: bold;
+    cursor: default;
+    background: #2094e9;
+    box-shadow: 2px 2px 0px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+    z-index: 2;
+    @include rt-square(28px);
+    line-height: 28px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+
+
+    &.callout-coords-nw {
+        border-radius: 30px 100px 100px 100px;
+    }
+
+    &.callout-coords-ne {
+        border-radius: 100px 30px 100px 100px;
+        margin-left: -26px;
+    }
+
+    &.callout-coords-se {
+        border-radius: 100px 100px 30px 100px;
+        margin-top: -26px;
+        margin-left: -26px;
+    }
+
+    &.callout-coords-sw {
+        border-radius: 100px 100px 100px 30px;
+        margin-top: -26px;
+    }
+}
+
+.callout-data {
+    display: none;
+}
+
+.callouts-tip {
+    display: block;
+    position: absolute;
+    visibility: visible;
+    padding: 5px;
+    font-size: 14px;
+    z-index: 11000;
+    color: #f4f4f4;
+    text-shadow: 0 -1px 0 #000;
+    opacity: 0;
+}
+
+.callouts-tip-inner {
+    padding: 6px 12px;
+    text-align: left;
+    max-width: 280px;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.1) inset;
+    word-break: normal;
+}
+
+.callout-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    font-size: 18px;
+    padding-bottom: 5px;
+
+    &.no-desc {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.callout-desc {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    padding-top: 5px;
+
+    &.no-title {
+        border-top: 0;
+        padding-top: 0;
+    }
+}
+
+.callouts-tip-arrow {
+    position: absolute;
+}
+
+.callouts-tip-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    line-height: 11px;
+    border-radius: 13px;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    display: none;
+}
+
+.above .callouts-tip-arrow {
+    @include rt-arrow-top(8px, #000);
+    bottom: -2px;
+
+    span {
+        @include rt-arrow-top(8px, #2c2f31);
+        display: block;
+        position: absolute;
+        margin-left: -8px;
+        bottom: 1px;
+    }
+}
+
+.left .callouts-tip-arrow {
+    @include rt-arrow-right(8px, #2c2f31);
+    right: -2px;
+}
+
+.below .callouts-tip-arrow {
+    @include rt-arrow-bottom(8px, #2c2f31);
+    top: -2px;
+}
+
+.right .callouts-tip-arrow {
+    @include rt-arrow-left(8px, #2c2f31);
+    left: -2px;
+}

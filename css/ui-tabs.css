@@ -1,0 +1,109 @@
+.tabs-wrapper {
+  margin: 3rem 0;
+  display: block;
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+  .tabs-wrapper .tabs-nav {
+    padding: 0;
+    margin: 0; }
+    .tabs-wrapper .tabs-nav > li {
+      display: inline-block; }
+      .tabs-wrapper .tabs-nav > li a {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        text-decoration: none; }
+        @media screen and (max-width: 48em) {
+          .tabs-wrapper .tabs-nav > li a {
+            font-size: 90%;
+            padding: 0.3rem .5rem; } }
+        @media screen and (min-width: 60em) {
+          .tabs-wrapper .tabs-nav > li a {
+            padding: 0.70rem 2.5rem; } }
+      .tabs-wrapper .tabs-nav > li.current a {
+        position: relative;
+        z-index: 1; }
+  .tabs-wrapper.top-left .tabs-nav, .tabs-wrapper.bottom-left .tabs-nav {
+    text-align: left; }
+  .tabs-wrapper.top-right .tabs-nav, .tabs-wrapper.bottom-right .tabs-nav {
+    text-align: right; }
+  .tabs-wrapper.bottom-right, .tabs-wrapper.bottom-left {
+    padding-bottom: 3rem; }
+    .tabs-wrapper.bottom-right .tabs-nav, .tabs-wrapper.bottom-left .tabs-nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3rem; }
+  .tabs-wrapper .tabs {
+    margin-bottom: -1px; }
+  .tabs-wrapper .tab {
+    margin-top: -1px;
+    display: none;
+    padding: 0.5rem 1.5rem; }
+    @media screen and (max-width: 48em) {
+      .tabs-wrapper .tab {
+        font-size: 90%;
+        padding: 0.5rem; } }
+    .tabs-wrapper .tab:first-child {
+      display: block; }
+  .tabs-wrapper.ui-theme-default .tabs-nav li a {
+    background-color: #fafafa;
+    border: 1px solid #e9e9e9; }
+    .tabs-wrapper.ui-theme-default .tabs-nav li a:hover {
+      background: whitesmoke; }
+  .tabs-wrapper.ui-theme-default .tabs-nav li.current a {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ffffff; }
+  .tabs-wrapper.ui-theme-default.bottom-right .tabs-nav li.current a, .tabs-wrapper.ui-theme-default.bottom-left .tabs-nav li.current a {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #e9e9e9; }
+  .tabs-wrapper.ui-theme-default .tab {
+    border: 1px solid #e9e9e9;
+    background-color: #ffffff; }
+  .tabs-wrapper.ui-theme-badges {
+    background: #f9f9f9;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px; }
+    .tabs-wrapper.ui-theme-badges .tabs-nav {
+      margin: 0.5rem; }
+      .tabs-wrapper.ui-theme-badges .tabs-nav .tabs {
+        padding: 0.5rem; }
+      .tabs-wrapper.ui-theme-badges .tabs-nav li a {
+        color: #7a7a7a;
+        background: #ececec;
+        padding: 0.1rem 1rem;
+        border-radius: 4px; }
+        .tabs-wrapper.ui-theme-badges .tabs-nav li a:hover {
+          background: #d8d8d8; }
+      .tabs-wrapper.ui-theme-badges .tabs-nav li.current a {
+        color: #fff;
+        background-color: #666; }
+    .tabs-wrapper.ui-theme-badges.bottom-left .tabs-nav, .tabs-wrapper.ui-theme-badges.bottom-right .tabs-nav {
+      margin: 0 0.5rem; }
+      .tabs-wrapper.ui-theme-badges.bottom-left .tabs-nav li, .tabs-wrapper.ui-theme-badges.bottom-right .tabs-nav li {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+  .tabs-wrapper.ui-theme-lite .tabs-nav li.current a {
+    font-weight: bold;
+    border-bottom: 1px solid #909090; }
+  .tabs-wrapper.ui-theme-lite .tabs-nav li:hover {
+    background: whitesmoke; }
+  .tabs-wrapper.ui-theme-lite.bottom-right .tabs-nav li.current a, .tabs-wrapper.ui-theme-lite.bottom-left .tabs-nav li.current a {
+    border-bottom: 0;
+    border-top: 1px solid #909090; }
+  .tabs-wrapper.ui-theme-lite.bottom-right .tab, .tabs-wrapper.ui-theme-lite.bottom-left .tab {
+    border-top: 0;
+    border-bottom: 1px solid #e9e9e9; }
+  .tabs-wrapper.ui-theme-lite .tab {
+    border-top: 1px solid #e9e9e9;
+    background-color: #ffffff;
+    padding: 0.5rem 0; }
+    @media screen and (max-width: 48em) {
+      .tabs-wrapper.ui-theme-lite .tab {
+        padding: 0.5rem 0; } }
+
+/*# sourceMappingURL=ui-tabs.css.map */
