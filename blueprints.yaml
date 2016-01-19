@@ -12,6 +12,9 @@ keywords: ui, plugin, tabs
 bugs: https://github.com/getgrav/grav-plugin-shortcode-ui/issues
 license: MIT
 
+dependencies:
+  - shortcode-core
+
 form:
   validation: strict
   fields:
