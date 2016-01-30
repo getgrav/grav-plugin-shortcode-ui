@@ -158,7 +158,7 @@ Source: https://codyhouse.co/gem/css-jquery-image-comparison-slider/
 
 Simple provide two images, each on a newline between this shortcode.  The `Alt` text for the image will be used for the title.
 
-#### Aniamted Text
+#### Animated Text
 
 This shortcode creates an attractive animated text effect with a few simple options.  By default, the animated text is appended to the end of the provided text.  However you can use the `%WORDS%` text token to insert the animated text anywhere in your string.
 
@@ -166,7 +166,7 @@ Source: https://codyhouse.co/gem/css-animated-headlines/
 
 The `[ui-animated-text]` shortcode has some parameters:
 
-* `words` - Various words in a comma seperated list to animate through
+* `words` - Various words in a comma separated list to animate through
 * `animation` - `rotate-1 | rotate-2 | rotate-3 | type | loading-bar | slide | scale | clip | zoom | push`
 * `element` - HTML element to wrap the text, for example `h1`
 
