@@ -1,3 +1,9 @@
+# v2.0.1
+## XX/XX/2017
+
+1. [](#bugfix)
+    * Add support for autoescaping in Twig
+
 # v2.0.0
 ## 02/11/2016
 
