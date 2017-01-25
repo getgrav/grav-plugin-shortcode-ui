@@ -1,6 +1,6 @@
 <dl class="callouts">
     <dt>
-        {{ shortcode.getContent() }}
+        {{ shortcode.getContent()|raw }}
         <div class="callouts-container">
         {% for callout in callouts %}
             {% set position = shortcodeui_parsePosition(callout.getParameter('position')) %}

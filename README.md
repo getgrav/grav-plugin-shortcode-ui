@@ -158,6 +158,23 @@ Source: https://codyhouse.co/gem/css-jquery-image-comparison-slider/
 
 Simple provide two images, each on a newline between this shortcode.  The `Alt` text for the image will be used for the title.
 
+#### Polaroid
+
+This shortcode displays an image in a polaroid frame which can be customized in various ways.
+
+```
+[ui-polaroid angle="-3" margin="30px 50px 20px 0" position="left" title="How's this for embarrasing!"]![](my-image.jpg)[/ui-polaroid]
+```
+
+* `angle` can be a positive or negative value that represents the degree of rotation
+* `margin` is the margin value applied to the bounding-box.  Use standard CSS values.
+* `postion` can be `left` or `right`
+* `title` is the text displayed below the image
+
+##### Example
+
+![](assets/ui-polaroid.png)
+
 #### Animated Text
 
 This shortcode creates an attractive animated text effect with a few simple options.  By default, the animated text is appended to the end of the provided text.  However you can use the `%WORDS%` text token to insert the animated text anywhere in your string.
