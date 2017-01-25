@@ -1,6 +1,8 @@
-# v2.0.1
-## XX/XX/2017
+# v2.1.0
+## 02/25/2017
 
+1. [](#new)
+    * Added new `polaroid` shortcode
 1. [](#bugfix)
     * Add support for autoescaping in Twig
 
