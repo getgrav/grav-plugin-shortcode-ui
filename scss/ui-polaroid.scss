@@ -16,22 +16,6 @@
     box-shadow: 2px -2px 20px 0px rgba(0,0,0,0.1);
     border: 1px solid #eee;
     -webkit-backface-visibility: hidden;
-    &:nth-child(1) {
-        left: 25%;
-        transform: rotate(10deg);
-    }
-
-    &:nth-child(2) {
-        left: 40%;
-        top: 20%;
-        transform: rotate(-15deg);
-    }
-
-    &:nth-child(3) {
-        left: 55%;
-        top: 10%;
-        transform: rotate(5deg);
-    }
 
     p {
         position: absolute;

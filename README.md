@@ -166,9 +166,10 @@ This shortcode displays an image in a polaroid frame which can be customized in 
 [ui-polaroid angle="-3" margin="30px 50px 20px 0" position="left" title="How's this for embarrasing!"]![](my-image.jpg)[/ui-polaroid]
 ```
 
-* `angle` can be a positive or negative value that represents the degree of rotation
-* `margin` is the margin value applied to the bounding-box.  Use standard CSS values.
-* `postion` can be `left` or `right`
+* `angle` can be a positive or negative value that represents the degree of rotation (3 by default)
+* `margin` is the margin value applied to the bounding-box.  Use standard CSS values. (browser defaults)
+* `postion` can be `left` or `right` (right by default)
+* `gloss` overlay effect can be `true` or `false` - (true by default)
 * `title` is the text displayed below the image
 
 ##### Example
