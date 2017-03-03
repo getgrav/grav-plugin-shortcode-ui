@@ -1,3 +1,9 @@
+# v2.2.1
+## 03/03/2017
+
+1. [](#bugfix)
+    * Typo! Renamed `accordian` to `accordion`
+
 # v2.2.0
 ## 03/02/2017
 
