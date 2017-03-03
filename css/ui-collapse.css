@@ -1,0 +1,44 @@
+[data-toggle='collapse'],
+.collapse-inner
+{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+[data-toggle='collapse']
+{
+    font-size: 1.4rem;
+
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    cursor: pointer;
+    transition: background-color .4s;
+    text-align: left;
+
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+}
+
+[data-toggle='collapse'].active,
+[data-toggle='collapse']:hover
+{
+    background-color: #ddd;
+}
+
+
+.collapse-wrapper
+{
+    overflow: hidden;
+
+    transition: max-height .4s;
+
+    background: #fff;
+}
+.collapse-inner
+{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
