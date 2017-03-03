@@ -1,0 +1,10 @@
+<div class="accordion-wrapper">
+    {% for key,item in accordion_items %}
+        {% set checked = (open != 'none' and loop.index0 == open or (type == 'checkbox' and open == 'all')) %}
+        <div>
+            <input id="{{ hash ~ key }}" name="{{ hash }}" type="{{ type }}" {{ checked  ? 'checked="checked"' : ''}} />
+            <label for="{{ hash ~ key }}">{{ item.getParameter('title') }}</label>
+            <article>{{ item.getContent()|raw }}</article>
+        </div>
+    {% endfor %}
+</div>

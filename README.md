@@ -7,6 +7,7 @@ The **Shortcode UI** plugin provides several useful UI elements for Grav as _sho
 It currently provides:
 
 * Tabs
+* Accordion
 * CSS browser wrapper
 * Callout for images with hover-tooltips
 * Dual image comparison with drag handle
@@ -85,6 +86,38 @@ The `[ui-tab]` shortcode that defines each _tab_ has the following parameters:
 
 You can use whatever markdown you wish in the tab itself.  They are auto-adjusting and fully responsive.
 
+
+#### Accordion
+
+An example of the Accordion shortcode is as follows:
+
+```
+[ui-accordion independent=true open=all]
+[ui-accordion-item title="Section 1"]
+Bacon ipsum dolor amet beef burgdoggen shoulder, meatball prosciutto kevin brisket chicken turkey. Kevin rump pancetta short loin capicola brisket landjaeger fatback picanha pork belly ribeye. Strip steak chuck turducken kevin t-bone ribeye cupim capicola alcatra rump. Venison pork chop biltong cupim pig rump meatloaf sausage pork. Strip steak kevin tongue brisket ball tip, venison turducken flank frankfurter corned beef pancetta fatback drumstick ham. Drumstick pastrami leberkas meatball flank tongue turkey ground round pork belly doner frankfurter porchetta jowl.
+[/ui-accordion-item]
+[ui-accordion-item title="Section 2"]
+Short loin swine shankle flank picanha andouille burgdoggen landjaeger hamburger drumstick. Beef ham tail, tri-tip flank ham hock meatball picanha corned beef t-bone shank turkey ball tip shoulder. Flank corned beef chicken, meatloaf venison ball tip ham hock tail salami jowl short ribs pork belly drumstick. Meatball chicken hamburger beef filet mignon doner pork picanha pork chop fatback rump ham tri-tip ball tip landjaeger. Sausage leberkas shoulder tongue short loin shankle. Prosciutto tri-tip frankfurter shoulder drumstick capicola. Pork loin shank strip steak pork belly tongue cow.
+[/ui-accordion-item]
+[ui-accordion-item title="Section 3"]
+Bacon ipsum dolor amet beef burgdoggen shoulder, meatball prosciutto kevin brisket chicken turkey. Kevin rump pancetta short loin capicola brisket landjaeger fatback picanha pork belly ribeye. Strip steak chuck turducken kevin t-bone ribeye cupim capicola alcatra rump. Venison pork chop biltong cupim pig rump meatloaf sausage pork. Strip steak kevin tongue brisket ball tip, venison turducken flank frankfurter corned beef pancetta fatback drumstick ham. Drumstick pastrami leberkas meatball flank tongue turkey ground round pork belly doner frankfurter porchetta jowl.
+[/ui-accordion-item]
+[/ui-accordion]
+```
+
+##### Example
+
+![](assets/ui-accordion.png)
+
+The `[ui-accordion]` shortcode has some optional parameters:
+
+* `open` - accordion item # starting from `0` (e.g. `1` = 2nd item) | `none` = all closed | `all` = all open
+* `independent` - `true` | `false` (default) = determines if panels can be opened independently from one-another
+
+The `[ui-accordion-item]` shortcode that defines each _accordion-item_ has the following parameters:
+
+* `title` - The text to display for the actual accordion item
+
 #### Browser
 
 This shortcode wraps content (image, text, whatever) with a HTML/CSS Browser frame.
@@ -157,6 +190,24 @@ Source: https://codyhouse.co/gem/css-jquery-image-comparison-slider/
 ![](assets/ui-image-compare.png)
 
 Simple provide two images, each on a newline between this shortcode.  The `Alt` text for the image will be used for the title.
+
+#### Polaroid
+
+This shortcode displays an image in a polaroid frame which can be customized in various ways.
+
+```
+[ui-polaroid angle="-3" margin="30px 50px 20px 0" position="left" title="How's this for embarrasing!"]![](my-image.jpg)[/ui-polaroid]
+```
+
+* `angle` can be a positive or negative value that represents the degree of rotation (3 by default)
+* `margin` is the margin value applied to the bounding-box.  Use standard CSS values. (browser defaults)
+* `postion` can be `left` or `right` (right by default)
+* `gloss` overlay effect can be `true` or `false` - (true by default)
+* `title` is the text displayed below the image
+
+##### Example
+
+![](assets/ui-polaroid.png)
 
 #### Animated Text
 
