@@ -3,7 +3,6 @@
   text-align: left; }
   .accordion-wrapper label {
     position: relative;
-    z-index: 20;
     display: block;
     cursor: pointer;
     color: #777;
@@ -36,7 +35,6 @@
     overflow: hidden;
     max-height: 0px;
     position: relative;
-    z-index: 10;
     transition: max-height 0.3s ease-in-out;
     border: 1px solid #eee;
     border-top: 0;

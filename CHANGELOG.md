@@ -1,3 +1,9 @@
+# v2.2.3
+## 03/04/2017
+
+1. [](#bugfix)
+    * Fixed a `z-index` issue in `AccordionShortcode`
+    
 # v2.2.2
 ## 03/04/2017
 
