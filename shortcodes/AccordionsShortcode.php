@@ -5,7 +5,7 @@ namespace Grav\Plugin\Shortcodes;
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
 
 
-class AccordionShortcode extends Shortcode
+class AccordionsShortcode extends Shortcode
 {
     public function init()
     {
