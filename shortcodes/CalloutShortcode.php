@@ -22,6 +22,7 @@ class CalloutShortcode extends Shortcode
             $output = $this->twig->processTemplate('partials/ui-callouts.html.twig', [
                 'hash' => $hash,
                 'shortcode' => $sc,
+                'classes' => $sc->getParameter('class'),
                 'callouts' => $this->shortcode->getStates($hash),
             ]);
 

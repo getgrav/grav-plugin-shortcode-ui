@@ -172,6 +172,14 @@ The `[ui-callout-item]` shortcode that defines each item has the following param
 
 You can use whatever markdown you wish in the item itself.  These will be represented as tooltips on hover.
 
+You can also combine this shortcode with [Animate.css](https://daneden.github.io/animate.css/) by including the CSS class in your theme or page, and then adding top-level class entries:
+
+```
+[ui-callout class="pulse infinite animated"] 
+...
+[/ui-callout]
+```
+
 #### Image Compare
 
 This shortcode takes two images and provides a simple way to compare them via a draggable handle that lets you slide one image over the other.

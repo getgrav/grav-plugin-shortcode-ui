@@ -1,3 +1,9 @@
+# v2.2.4
+## 04/xx/2017
+
+1. [](#improved)
+    * Added the ability to set `class=""` on the `ui-callout` shortcode [#19](https://github.com/getgrav/grav-plugin-shortcode-ui/pull/19)
+
 # v2.2.3
 ## 03/04/2017
 
