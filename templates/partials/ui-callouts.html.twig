@@ -6,7 +6,7 @@
             {% set position = shortcodeui_parsePosition(callout.getParameter('position')) %}
             {% set content = '<div class="tooltip-header"><h4>'~callout.getParameter('title')~'</h4></div><div class="tooltip-content">'~callout.getContent()|trim~'</div>' %}
             <div class="callout-item" data-tooltip="{{ content|e('html_attr') }}" data-tooltip-color="white" style="{{ position.location }}">
-                <div class="callout-marker callout-coords-{{ position.coords }}">{{ loop.index }}</div>
+                <div class="callout-marker callout-coords-{{ position.coords }} {{ classes }}">{{ loop.index }}</div>
             </div>
         {% endfor %}
         </div>

@@ -2,7 +2,7 @@
     <ul class="tabs-nav">
     {% for key,tab in child_tabs %}
         {% set class = key == active ? ' class="current"' %}
-        <li{{ class|raw }}><a href="#{{ hash ~ key }}" rel="tab">{{ tab.getParameter('title', 'Tab '~key) }}</a></li>
+        <li{{ class|raw }}><a href="#{{ hash ~ key }}" id="{{ tab.getParameter('id', 'Tab'~key) }}" rel="tab">{{ tab.getParameter('title', 'Tab '~key) }}</a></li>
     {% endfor %}
     </ul>
     <div class="tabs">

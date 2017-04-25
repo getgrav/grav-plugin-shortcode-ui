@@ -1,3 +1,10 @@
+# v2.2.4
+## 04/25/2017
+
+1. [](#improved)
+    * Added the ability to set `class=""` on the `ui-callout` shortcode [#19](https://github.com/getgrav/grav-plugin-shortcode-ui/pull/19)
+    * Allow the ability to set an `id="""` on tabs [#16](https://github.com/getgrav/grav-plugin-shortcode-ui/pull/16)
+
 # v2.2.3
 ## 03/04/2017
 
