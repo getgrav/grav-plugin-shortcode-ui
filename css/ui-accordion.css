@@ -41,7 +41,7 @@
     border-bottom: 0;
     padding: 0 15px; }
   .accordion-wrapper input:checked ~ article {
-    max-height: 500px; }
+    max-height: inherit; }
   .accordion-wrapper input:checked + label {
     border-bottom: 1px solid #eee; }
   .accordion-wrapper > div:last-child label, .accordion-wrapper > div:last-child input:checked ~ article {
