@@ -54,7 +54,7 @@
   }
 
   input:checked ~ article{
-    max-height: 500px;
+    max-height: inherit;
   }
 
   input:checked + label {
