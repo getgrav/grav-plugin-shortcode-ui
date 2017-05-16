@@ -1,5 +1,5 @@
 # v2.2.5
-## 04/25/2017
+## 05/16/2017
 
 1. [](#bugfix)
     * Resoled issue with fixed height of accordion [#20](https://github.com/getgrav/grav-plugin-shortcode-ui/issues/20)
