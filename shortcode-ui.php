@@ -24,6 +24,12 @@ class ShortcodeUiPlugin extends Plugin
     public function onTwigTemplatePaths()
     {
         $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
+
+        $custom_shortcodes = $this->config->get('plugins.shortcode-ui.custom_shortcodes');
+        if (isset($custom_shortcodes)) {
+            $this->grav['twig']->twig_paths[] = GRAV_ROOT . $custom_shortcodes.'/templates';
+        }
+
     }
 
     public function onTwigExtensions()
@@ -38,5 +44,9 @@ class ShortcodeUiPlugin extends Plugin
     public function onShortcodeHandlers()
     {
         $this->grav['shortcode']->registerAllShortcodes(__DIR__.'/shortcodes');
+        $custom_shortcodes = $this->config->get('plugins.shortcode-ui.custom_shortcodes');
+        if (isset($custom_shortcodes)) {
+            $this->grav['shortcode']->registerAllShortcodes(GRAV_ROOT . $custom_shortcodes.'/shortcodes');
+        }
     }
 }
