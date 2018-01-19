@@ -15,9 +15,10 @@
     .accordion-wrapper label:hover {
       background: #eee;
       color: #444; }
+  .accordion-wrapper label:after, .accordion-wrapper input:checked + label:after {
+    content: ''; }
   .accordion-wrapper label:hover:after, .accordion-wrapper input:checked + label:hover:after {
     opacity: 0.3;
-    content: '';
     position: absolute;
     width: 30px;
     height: 20px;
