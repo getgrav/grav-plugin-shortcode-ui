@@ -21,6 +21,8 @@ class AnimatedTextShortcode extends Shortcode
             $words = $sc->getParameter('words', 'cool, funky, fresh');
             $visible = $sc->getParameter('visible', 1);
 
+            $words = explode(',', $words);
+
 
             if (Utils::contains($content, '%WORDS%')) {
                 $content = explode('%WORDS%', $content);
@@ -34,7 +36,7 @@ class AnimatedTextShortcode extends Shortcode
 
             $output = $this->twig->processTemplate('partials/ui-atext.html.twig', [
                 'content' => $content,
-                'words' => explode(',', $words),
+                'words' => $words,
                 'animation' => $animation,
                 'element' => $sc->getParameter('element', 'h1'),
                 'wrapper_extra' => Utils::contains($animation, 'type') ? ' waiting' : '',

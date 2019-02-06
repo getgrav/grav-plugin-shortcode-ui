@@ -1,3 +1,10 @@
+# v2.3.0
+## 02/06/2019
+
+1. [](#bugfix)
+    * Resoled issue with fixed height of `Accordion` shortcode [#20](https://github.com/getgrav/grav-plugin-shortcode-ui/issues/20)
+    * PHP 7.2 Fix for `AnimatedText` shortcode 
+
 # v2.2.5
 ## 05/16/2017
 

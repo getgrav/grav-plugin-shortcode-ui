@@ -7,7 +7,7 @@
     </ul>
     <div class="tabs">
     {% for key,tab in child_tabs %}
-        <div class="tab" id="{{ hash ~ key }}">{{ tab.getContent()|raw }}</div>
+        <div class="tab" id="{{ hash ~ key }}" style="display: {{ key == active ? 'block' : 'none' }}">{{ tab.getContent()|raw }}</div>
     {% endfor %}
     </div>
 </div>
