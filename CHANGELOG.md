@@ -1,5 +1,5 @@
 # v2.3.0
-## 02/06/2018
+## 02/06/2019
 
 1. [](#bugfix)
     * Resoled issue with fixed height of `Accordion` shortcode [#20](https://github.com/getgrav/grav-plugin-shortcode-ui/issues/20)
