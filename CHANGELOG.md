@@ -1,3 +1,13 @@
+# v2.4.0
+## mm/dd/2020
+
+1. [](#new)
+    * Pass phpstan level 1 tests
+    * Requires shortcode-core plugin v4.2.0
+    * Twig 2.0 compatibility
+1. [](#improved)
+    * Code cleanup
+
 # v2.3.0
 ## 02/06/2019
 
