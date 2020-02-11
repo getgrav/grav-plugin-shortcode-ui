@@ -2,15 +2,14 @@
 
 namespace Grav\Plugin\Shortcodes;
 
+use Grav\Plugin\ShortcodeCore\Shortcode;
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
-
 
 class CalloutShortcode extends Shortcode
 {
     public function init()
     {
         $this->shortcode->getHandlers()->add('ui-callout', function(ShortcodeInterface $sc) {
-
             // Add assets
             $this->shortcode->addAssets('js', ['jquery', 101]);
             $this->shortcode->addAssets('js', 'plugin://shortcode-ui/js/ui-tooltips.js');
@@ -19,12 +18,15 @@ class CalloutShortcode extends Shortcode
 
             $hash = $this->shortcode->getId($sc);
 
-            $output = $this->twig->processTemplate('partials/ui-callouts.html.twig', [
-                'hash' => $hash,
-                'shortcode' => $sc,
-                'classes' => $sc->getParameter('class'),
-                'callouts' => $this->shortcode->getStates($hash),
-            ]);
+            $output = $this->twig->processTemplate(
+                'partials/ui-callouts.html.twig',
+                [
+                    'hash' => $hash,
+                    'shortcode' => $sc,
+                    'classes' => $sc->getParameter('class'),
+                    'callouts' => $this->shortcode->getStates($hash),
+                ]
+            );
 
             return $output;
         });
@@ -33,7 +35,8 @@ class CalloutShortcode extends Shortcode
             // Add tab to tab state using parent tabs id
             $hash = $this->shortcode->getId($sc->getParent());
             $this->shortcode->setStates($hash, $sc);
-            return;
+
+            return '';
         });
     }
 }

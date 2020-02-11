@@ -1,5 +1,5 @@
 <?php
-namespace Grav\Plugin;
+namespace Grav\Plugin\ShortcodeUi;
 
 class ShortcodeUiTwigExtension extends \Twig_Extension
 {
@@ -25,8 +25,8 @@ class ShortcodeUiTwigExtension extends \Twig_Extension
         preg_match('/(.+), *(.+), *(\w+)/', $position, $matches);
 
         $position = [
-            'location' => 'top:'.$matches[1].';left:'.$matches[2].';',
-            'coords'   => isset($matches[3]) ? $matches[3] : 'nw',
+            'location' => 'top:' . $matches[1] . ';left:' . $matches[2] . ';',
+            'coords'   => $matches[3] ?? 'nw',
             ];
 
         return $position;

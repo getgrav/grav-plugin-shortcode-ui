@@ -2,7 +2,7 @@
 <div class="polaroid-wrapper {{ shortcode.getParameter('position', 'right') }}" style="margin:{{ shortcode.getParameter('margin', '30px') }};">
     <div class="polaroid" style="transform: rotate({{ shortcode.getParameter('angle', 3) }}deg);">
         <div class="polaroid-img">
-            {% if gloss is sameas(true) %}
+            {% if gloss is same as(true) %}
             <div class="gloss"></div>
             {% endif %}
             {{ shortcode.getContent()|raw }}
