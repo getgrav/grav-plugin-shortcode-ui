@@ -2,7 +2,6 @@
 
 namespace Grav\Plugin\Shortcodes;
 
-use Grav\Plugin\ShortcodeCore\Shortcode;
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
 
 class PolaroidShortcode extends Shortcode
