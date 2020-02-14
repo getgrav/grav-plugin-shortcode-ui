@@ -1,5 +1,5 @@
 name: Shortcode UI
-version: 2.4.0
+version: 2.4.1
 description: "This plugin provides several UI shortcodes"
 icon: code
 author:
@@ -14,7 +14,7 @@ license: MIT
 
 dependencies:
   - { name: grav, version: '>=1.6.4' }
-  - { name: shortcode-core, version: '>=4.2.0' }
+  - { name: shortcode-core, version: '>=4.2.1' }
 
 form:
   validation: strict
