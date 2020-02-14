@@ -1,3 +1,9 @@
+# v2.4.1
+## 02/14/2020
+
+1. [](#new)
+    * Updated code for shortcode-core plugin v4.2.1
+
 # v2.4.0
 ## 02/11/2020
 
