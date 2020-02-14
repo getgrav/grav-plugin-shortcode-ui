@@ -1,5 +1,5 @@
 # v2.4.1
-## 02/11/2020
+## 02/14/2020
 
 1. [](#new)
     * Updated code for shortcode-core plugin v4.2.1
