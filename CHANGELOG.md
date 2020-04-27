@@ -1,3 +1,9 @@
+# v2.4.2
+## 04/27/2020
+
+1. [](#bugfix)
+    * Fix image compare shortcode regex [#34](https://github.com/getgrav/grav-plugin-shortcode-ui/pull/34)
+
 # v2.4.1
 ## 02/14/2020
 
