@@ -1,5 +1,5 @@
 {% set gloss = shortcode.getParameter('gloss', true) %}
-<div class="polaroid-wrapper {{ shortcode.getParameter('position', 'right') }}" style="margin:{{ shortcode.getParameter('margin', '30px') }};">
+<div class="polaroid-wrapper {{ shortcode.getParameter('position', 'right') }}" style="margin:{{ shortcode.getParameter('margin', '30px') }};" class="{{ shortcode.getParameter('class') }}">
     <div class="polaroid" style="transform: rotate({{ shortcode.getParameter('angle', 3) }}deg);">
         <div class="polaroid-img">
             {% if gloss is same as(true) %}

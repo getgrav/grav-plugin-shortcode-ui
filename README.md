@@ -206,7 +206,9 @@ Simple provide two images, each on a newline between this shortcode.  The `Alt` 
 This shortcode displays an image in a polaroid frame which can be customized in various ways.
 
 ```
-[ui-polaroid angle="-3" margin="30px 50px 20px 0" position="left" title="How's this for embarrasing!"]![](my-image.jpg)[/ui-polaroid]
+[ui-polaroid angle="-3" margin="30px 50px 20px 0" position="left" title="How's this for embarrasing!"]
+![](my-image.jpg)
+[/ui-polaroid]
 ```
 
 * `angle` can be a positive or negative value that represents the degree of rotation (3 by default)
@@ -214,6 +216,7 @@ This shortcode displays an image in a polaroid frame which can be customized in 
 * `postion` can be `left` or `right` (right by default)
 * `gloss` overlay effect can be `true` or `false` - (true by default)
 * `title` is the text displayed below the image
+* `class` optional classes to pass to the wrapper
 
 ##### Example
 

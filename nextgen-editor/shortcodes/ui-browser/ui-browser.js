@@ -24,7 +24,7 @@ window.nextgenEditor.addShortcode('ui-browser', {
   titlebar({ attributes }) {
     return `address: <strong>${attributes.address}</strong>`;
   },
-  content({ attributes }) {
+  content() {
     return `<div>{{content_editable}}</div>`;
   },
 });
