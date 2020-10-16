@@ -64,6 +64,7 @@ class ShortcodeUiPlugin extends Plugin
         $plugins['js'][] = 'plugin://shortcode-ui/nextgen-editor/shortcodes/ui-tabs/ui-tabs.js';
         $plugins['js'][] = 'plugin://shortcode-ui/nextgen-editor/shortcodes/ui-browser/ui-browser.js';
         $plugins['js'][] = 'plugin://shortcode-ui/nextgen-editor/shortcodes/ui-polaroid/ui-polaroid.js';
+        $plugins['js'][] = 'plugin://shortcode-ui/nextgen-editor/shortcodes/ui-animated-text/ui-animated-text.js';
         $plugins['js'][] = 'plugin://shortcode-ui/nextgen-editor/shortcodes/ui-image-compare/ui-image-compare.js';
 
         $event['plugins']  = $plugins;

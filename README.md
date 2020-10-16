@@ -224,6 +224,8 @@ This shortcode displays an image in a polaroid frame which can be customized in 
 
 #### Animated Text
 
+> NOTE: Requires JQuery to be loaded
+
 This shortcode creates an attractive animated text effect with a few simple options.  By default, the animated text is appended to the end of the provided text.  However you can use the `%WORDS%` text token to insert the animated text anywhere in your string.
 
 Source: https://codyhouse.co/gem/css-animated-headlines/
