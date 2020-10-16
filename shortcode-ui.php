@@ -19,6 +19,9 @@ class ShortcodeUiPlugin extends Plugin
             'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
             'onTwigExtensions' => ['onTwigExtensions', 0],
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
+            'registerNextGenEditorPlugin' => [
+                ['registerNextGenEditorPluginShortcodes', 0],
+            ],
         ];
     }
 
@@ -51,5 +54,16 @@ class ShortcodeUiPlugin extends Plugin
     public function onShortcodeHandlers()
     {
         $this->grav['shortcode']->registerAllShortcodes(__DIR__ . '/classes/shortcodes');
+    }
+
+    public function registerNextGenEditorPluginShortcodes($event) {
+        $plugins = $event['plugins'];
+
+        $plugins['js'][] = 'plugin://shortcode-ui/nextgen-editor/shortcodes/shortcode-ui.js';
+        $plugins['js'][] = 'plugin://shortcode-ui/nextgen-editor/shortcodes/ui-accordion/ui-accordion.js';
+        $plugins['js'][] = 'plugin://shortcode-ui/nextgen-editor/shortcodes/ui-tabs/ui-tabs.js';
+
+        $event['plugins']  = $plugins;
+        return $event;
     }
 }
