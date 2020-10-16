@@ -123,10 +123,12 @@ The `[ui-accordion-item]` shortcode that defines each _accordion-item_ has the f
 This shortcode wraps content (image, text, whatever) with a HTML/CSS Browser frame.
 
 ```
-[ui-browser address="http://getgrav.org"]
+[ui-browser address="http://getgrav.org" class="p-4"]
 ![](getgrav.png)
 [/ui-browser]
 ```
+
+NOTE: Address is displayed in the browser location field, and class is optional but is applied to the browser window.
 
 ##### Example
 
