@@ -19,9 +19,7 @@ class ShortcodeUiPlugin extends Plugin
             'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
             'onTwigExtensions' => ['onTwigExtensions', 0],
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
-            'registerNextGenEditorPlugin' => [
-                ['registerNextGenEditorPluginShortcodes', 0],
-            ],
+            'registerNextGenEditorPlugin' => ['registerNextGenEditorPluginShortcodes', 0],
         ];
     }
 
