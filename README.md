@@ -49,6 +49,8 @@ This plugin provides a variety of plugins, each with a specific purpose:
 
 #### Tabs
 
+> NOTE: Requires JQuery to be loaded
+
 An example of the Tabs shortcode is as follows:
 
 ```
@@ -140,6 +142,8 @@ The `[ui-browser]` shortcode has some optional parameters:
 
 #### Callout
 
+> NOTE: Requires JQuery to be loaded
+
 The `[ui-callout]` shortcode is intended to be able to provide numbered callout badges on an image and allow you to hover over an image and see a tooltip describing a particular feature.  This is particularly useful when describing a user interface or provide notes or tips for an image.
 
 Each `[ui-callout-item]` defines a particular item or tip that exists for the image.
@@ -183,6 +187,8 @@ You can also combine this shortcode with [Animate.css](https://daneden.github.io
 ```
 
 #### Image Compare
+
+> NOTE: Requires JQuery to be loaded
 
 This shortcode takes two images and provides a simple way to compare them via a draggable handle that lets you slide one image over the other.
 
