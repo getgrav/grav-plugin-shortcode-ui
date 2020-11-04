@@ -1,3 +1,9 @@
+# v3.0.0
+## 11/04/2020
+
+1. [](#new)
+    * Support for **NextGen Editor** integration with Shortcode UI custom blocks
+
 # v2.4.2
 ## 04/27/2020
 
