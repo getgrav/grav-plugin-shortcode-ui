@@ -7,6 +7,6 @@
             <div class="btoolbar-address"><i class="fa fa-repeat"></i><em>{{ address }}</em></div>
             <span class="btoolbar-action"><i class="fa fa-bars"></i></span>
         </div>
-        <div class="bbody">{{ shortcode.getContent()|raw }}</div>
+        <div class="bbody {{ class ?: '' }}">{{ shortcode.getContent()|raw }}</div>
     </div>
 </div>

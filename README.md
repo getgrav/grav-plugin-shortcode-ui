@@ -49,6 +49,8 @@ This plugin provides a variety of plugins, each with a specific purpose:
 
 #### Tabs
 
+> NOTE: Requires JQuery to be loaded
+
 An example of the Tabs shortcode is as follows:
 
 ```
@@ -123,10 +125,12 @@ The `[ui-accordion-item]` shortcode that defines each _accordion-item_ has the f
 This shortcode wraps content (image, text, whatever) with a HTML/CSS Browser frame.
 
 ```
-[ui-browser address="http://getgrav.org"]
+[ui-browser address="http://getgrav.org" class="p-4"]
 ![](getgrav.png)
 [/ui-browser]
 ```
+
+NOTE: Address is displayed in the browser location field, and class is optional but is applied to the browser window.
 
 ##### Example
 
@@ -137,6 +141,8 @@ The `[ui-browser]` shortcode has some optional parameters:
 * `address` - URL to display in the fake address bar of the browser
 
 #### Callout
+
+> NOTE: Requires JQuery to be loaded
 
 The `[ui-callout]` shortcode is intended to be able to provide numbered callout badges on an image and allow you to hover over an image and see a tooltip describing a particular feature.  This is particularly useful when describing a user interface or provide notes or tips for an image.
 
@@ -182,6 +188,8 @@ You can also combine this shortcode with [Animate.css](https://daneden.github.io
 
 #### Image Compare
 
+> NOTE: Requires JQuery to be loaded
+
 This shortcode takes two images and provides a simple way to compare them via a draggable handle that lets you slide one image over the other.
 
 Source: https://codyhouse.co/gem/css-jquery-image-comparison-slider/
@@ -204,7 +212,9 @@ Simple provide two images, each on a newline between this shortcode.  The `Alt` 
 This shortcode displays an image in a polaroid frame which can be customized in various ways.
 
 ```
-[ui-polaroid angle="-3" margin="30px 50px 20px 0" position="left" title="How's this for embarrasing!"]![](my-image.jpg)[/ui-polaroid]
+[ui-polaroid angle="-3" margin="30px 50px 20px 0" position="left" title="How's this for embarrasing!"]
+![](my-image.jpg)
+[/ui-polaroid]
 ```
 
 * `angle` can be a positive or negative value that represents the degree of rotation (3 by default)
@@ -212,12 +222,15 @@ This shortcode displays an image in a polaroid frame which can be customized in 
 * `postion` can be `left` or `right` (right by default)
 * `gloss` overlay effect can be `true` or `false` - (true by default)
 * `title` is the text displayed below the image
+* `class` optional classes to pass to the wrapper
 
 ##### Example
 
 ![](assets/ui-polaroid.png)
 
 #### Animated Text
+
+> NOTE: Requires JQuery to be loaded
 
 This shortcode creates an attractive animated text effect with a few simple options.  By default, the animated text is appended to the end of the provided text.  However you can use the `%WORDS%` text token to insert the animated text anywhere in your string.
 

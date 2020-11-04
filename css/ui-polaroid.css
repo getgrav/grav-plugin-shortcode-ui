@@ -4,19 +4,19 @@
 .polaroid-wrapper.left {
   float: left; }
 
-.polaroid {
+.polaroid-wrapper .polaroid {
   width: 300px;
   height: 360px;
   background: #FAFAF9;
   box-shadow: 2px -2px 20px 0px rgba(0, 0, 0, 0.1);
   border: 1px solid #eee;
   -webkit-backface-visibility: hidden; }
-  .polaroid p {
+  .polaroid-wrapper .polaroid > p {
     position: absolute;
     bottom: 5px;
     padding: 15px 20px;
     margin: 0; }
-  .polaroid .gloss {
+  .polaroid-wrapper .polaroid .gloss {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,7 +26,7 @@
     height: 100%;
     z-index: 10; }
 
-.polaroid-img {
+.polaroid-wrapper .polaroid-img {
   position: absolute;
   top: 20px;
   left: 10px;
@@ -34,8 +34,14 @@
   height: 280px;
   background: #eee;
   overflow: hidden; }
-  .polaroid-img img {
+  .polaroid-wrapper .polaroid-img img {
     margin: 0 !important;
     display: inline-block !important;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -1; }
+  .polaroid-wrapper .polaroid-img p {
+    margin: 0;
+    padding: 0;
+    height: 100%; }

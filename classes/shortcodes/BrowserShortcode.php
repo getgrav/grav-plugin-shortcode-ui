@@ -16,6 +16,7 @@ class BrowserShortcode extends Shortcode
                 'partials/ui-browser.html.twig',
                 [
                     'address' => $sc->getParameter('address', 'http://localhost'),
+                    'class' => $sc->getParameter('class', null),
                     'shortcode' => $sc,
                 ]
             );
