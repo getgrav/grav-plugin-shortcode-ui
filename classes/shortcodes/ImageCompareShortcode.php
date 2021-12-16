@@ -15,7 +15,7 @@ class ImageCompareShortcode extends Shortcode
 
             $content = $sc->getContent();
 
-            preg_match_all('/<img.*(?:alt="(.*?)").*\/?>/', $content, $matches);
+            preg_match_all("/<img\s[^>]*?alt\s*=\s*['\"]([^'\"]*?)['\"][^>]*?>/", $content, $matches);
 
             if (count($matches) === 2 && count($matches[0]) === 2) {
                 return $this->twig->processTemplate(

@@ -64,6 +64,8 @@
   height: 100%;
   width: auto;
   max-width: none;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 .cd-resize-img .cd-image-label {
   right: auto;
