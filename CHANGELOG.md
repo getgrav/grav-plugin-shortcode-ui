@@ -1,3 +1,9 @@
+# v3.0.1
+## 12/16/2021
+
+1. [](#bugfix)
+    * Various minor **ImageCompare** fixes
+
 # v3.0.0
 ## 11/04/2020
 
