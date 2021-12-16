@@ -1,5 +1,5 @@
 {
-    "name": "grav-plugin-shortcode-ui",
+    "name": "getgrav/shortcode-ui",
     "type": "grav-plugin",
     "description": "Shortcode UI plugin for Grav CMS",
     "keywords": ["shortcode"],
