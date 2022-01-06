@@ -1,3 +1,9 @@
+# v3.0.2
+## mm/dd/2022
+
+1. [](#improved)
+    * Improved Twig 2 support
+
 # v3.0.1
 ## 12/16/2021
 

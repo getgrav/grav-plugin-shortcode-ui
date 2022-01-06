@@ -1,22 +1,25 @@
 <?php
 namespace Grav\Plugin\ShortcodeUi;
 
-class ShortcodeUiTwigExtension extends \Twig_Extension
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
+
+class ShortcodeUiTwigExtension extends AbstractExtension
 {
     /**
      * Returns extension name.
      *
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return 'ShortcodeUiExtension';
     }
 
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
-            new \Twig_SimpleFunction('shortcodeui_parsePosition', [$this, 'parsePositionFunc']),
+            new TwigFunction('shortcodeui_parsePosition', [$this, 'parsePositionFunc']),
         ];
     }
 
