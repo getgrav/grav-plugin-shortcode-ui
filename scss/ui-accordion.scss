@@ -20,9 +20,12 @@
     }
   }
 
+  label:after, input:checked + label:after {
+    content: '';
+  }
+
   label:hover:after, input:checked + label:hover:after {
     opacity: 0.3;
-    content: '';
     position: absolute;
     width: 30px;
     height: 20px;
