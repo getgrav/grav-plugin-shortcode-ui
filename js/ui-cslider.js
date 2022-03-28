@@ -33,19 +33,32 @@ function checkPosition(container) {
 
 //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
 function drags(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
-    dragElement.on("mousedown vmousedown", function(e) {
+    dragElement.on("mousedown vmousedown touchstart", function(e) {
         dragElement.addClass('draggable');
         resizeElement.addClass('resizable');
+        
+        if (e.type == "touchstart") {
+            var pageX = e.originalEvent.changedTouches[0].pageX;
+        } else {
+            var pageX = e.pageX
+        }
 
         var dragWidth = dragElement.outerWidth(),
-            xPosition = dragElement.offset().left + dragWidth - e.pageX,
+            xPosition = dragElement.offset().left + dragWidth - pageX,
             containerOffset = container.offset().left,
             containerWidth = container.outerWidth(),
             minLeft = containerOffset - dragWidth/2,
             maxLeft = containerOffset + containerWidth - dragWidth/2;
 
-        dragElement.parents().on("mousemove vmousemove", function(e) {
-            leftValue = e.pageX + xPosition - dragWidth;
+        dragElement.parents().on("mousemove vmousemove touchmove", function(e) {
+            
+            if (e.type == "touchmove") {
+                pageX = e.originalEvent.changedTouches[0].pageX;
+            } else {
+                pageX = e.pageX
+            }
+            
+            leftValue = pageX + xPosition - dragWidth;
 
             //constrain the draggable element to move inside his container
             if(leftValue < minLeft ) {
@@ -56,7 +69,7 @@ function drags(dragElement, resizeElement, container, labelContainer, labelResiz
 
             widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
 
-            $('.draggable').css('left', widthValue).on("mouseup vmouseup", function() {
+            $('.draggable').css('left', widthValue).on("mouseup vmouseup touchend", function() {
                 $(this).removeClass('draggable');
                 resizeElement.removeClass('resizable');
             });
@@ -66,12 +79,12 @@ function drags(dragElement, resizeElement, container, labelContainer, labelResiz
             updateLabel(labelResizeElement, resizeElement, 'left');
             updateLabel(labelContainer, resizeElement, 'right');
 
-        }).on("mouseup vmouseup", function(e){
+        }).on("mouseup vmouseup touchend", function(e){
             dragElement.removeClass('draggable');
             resizeElement.removeClass('resizable');
         });
         e.preventDefault();
-    }).on("mouseup vmouseup", function(e) {
+    }).on("mouseup vmouseup touchend", function(e) {
         dragElement.removeClass('draggable');
         resizeElement.removeClass('resizable');
     });
