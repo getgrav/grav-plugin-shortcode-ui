@@ -21,7 +21,6 @@ class ShortcodeUiPlugin extends Plugin
             'onTwigExtensions' => ['onTwigExtensions', 0],
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
             'onEditorProShortcodeRegister' => ['onEditorProShortcodeRegister', 0],
-//            'registerEditorProPlugin' => ['registerEditorProPlugin', 0],
             'registerNextGenEditorPlugin' => ['registerNextGenEditorPluginShortcodes', 0],
         ];
     }
@@ -56,16 +55,6 @@ class ShortcodeUiPlugin extends Plugin
     {
         $this->grav['shortcode']->registerAllShortcodes(__DIR__ . '/classes/shortcodes');
     }
-
-//    public function registerEditorProPlugin($event) {
-//        $plugins = $event['plugins'];
-//
-//        // Add Editor Pro shortcode integration JavaScript
-//        $plugins['js'][] = 'plugin://shortcode-core/editor-pro/shortcode-integration.js';
-//
-//        $event['plugins'] = $plugins;
-//        return $event;
-//    }
 
     public function registerNextGenEditorPluginShortcodes($event) {
         $plugins = $event['plugins'];
