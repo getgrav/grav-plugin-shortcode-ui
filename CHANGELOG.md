@@ -1,3 +1,11 @@
+# v3.1.0
+## 08/25/2025
+
+1. [](#new)
+    * Added support for **Editor Pro** integration with Shortcode UI custom blocks
+1. [](#improved)
+    * Improved Twig 2 support
+
 # v3.0.1
 ## 12/16/2021
 
