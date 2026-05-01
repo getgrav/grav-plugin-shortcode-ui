@@ -1,7 +1,7 @@
 name: Shortcode UI
 slug: shortcode-ui
 type: plugin
-version: 3.1.0
+version: 3.1.1
 description: "This plugin provides several UI shortcodes"
 icon: code
 author:
@@ -13,6 +13,9 @@ demo: http://learn.getgrav.org
 keywords: ui, plugin, tabs
 bugs: https://github.com/getgrav/grav-plugin-shortcode-ui/issues
 license: MIT
+
+compatibility:
+  grav: ['1.7', '2.0']
 
 dependencies:
   - { name: grav, version: '>=1.7.42' }
