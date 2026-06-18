@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.tabs-wrapper > ul a[rel="tab"]').click(function(event) {
+    $(document).on('click', '.tabs-wrapper > ul a[rel="tab"]', function(event) {
         event.preventDefault();
         $(this).parent().siblings().removeClass("current");
         $(this).parent().addClass("current");
