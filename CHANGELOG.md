@@ -1,3 +1,9 @@
+# v3.1.2
+## 09/27/2026
+
+1. [](#bugfix)
+    * Tabs are readable again on themes with a dark mode, such as Quark 2 and Typhoon. Light mode looks exactly as before, and the tab colors can now be changed with `--ui-tabs-*` CSS variables ([#50](https://github.com/getgrav/grav-plugin-shortcode-ui/issues/50))
+
 # v3.1.1
 ## 05/01/2026
 
