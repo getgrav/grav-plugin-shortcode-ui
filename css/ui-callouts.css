@@ -11,6 +11,10 @@
 .callout-item {
   position: absolute; }
 
+.callout-item[data-tooltip]::before,
+.callout-item[data-tooltip]::after {
+  content: none; }
+
 .callout-marker {
   font-family: helvetica, arial, sans-serif;
   font-weight: bold;

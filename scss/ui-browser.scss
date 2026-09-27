@@ -1,7 +1,11 @@
-$border-color: #ddd;
-$toolbar-bg: #eee;
-$toolbar-fg: #bbb;
-$address-bg: #fff;
+// Colors are custom properties so a theme can restyle the frame and so dark
+// mode (below) can swap them. The fallbacks are the light colors.
+$border-color: var(--ui-browser-border, #ddd);
+$toolbar-bg: var(--ui-browser-toolbar-bg, #eee);
+$toolbar-fg: var(--ui-browser-toolbar-color, #bbb);
+$button-bg: var(--ui-browser-button-bg, #bbb);
+$address-bg: var(--ui-browser-address-bg, #fff);
+$address-border: var(--ui-browser-address-border, #e9e9e9);
 $border-radius: 4px;
 $toolbar-height: 40px;
 $button-indent: 15px;
@@ -16,7 +20,7 @@ $button-space: 8px;
 .browser-frame {
     margin: 0 auto;
     display: inline-block;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: var(--ui-browser-shadow, 0 10px 30px rgba(0, 0, 0, 0.2));
     border-radius: $border-radius;
     border: 1px solid $border-color;
 
@@ -34,7 +38,7 @@ $button-space: 8px;
         display: block;
         width: $button-size;
         height: $button-size;
-        background: $toolbar-fg;
+        background: $button-bg;
         border-radius: 100%;
         top: 13px;
         left: $button-indent;
@@ -56,7 +60,7 @@ $button-space: 8px;
         right: 7*$button-size;
         background: $address-bg;
         border-radius: $border-radius;
-        border: 1px solid darken($toolbar-bg,2%);
+        border: 1px solid $address-border;
         padding: 0 0.5rem;
         overflow: hidden;
         white-space: nowrap;
@@ -92,4 +96,17 @@ $button-space: 8px;
             display:block;
         }
     }
+}
+
+// Dark mode, when the theme flags it on <html> with a `dark` class or
+// `data-theme="dark"` (same keys and neutral palette as the tabs).
+:root.dark .browser-frame,
+:root[data-theme="dark"] .browser-frame {
+    --ui-browser-border: #3a3b40;
+    --ui-browser-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --ui-browser-toolbar-bg: #26272b;
+    --ui-browser-toolbar-color: #a8a8a8;
+    --ui-browser-button-bg: #55565c;
+    --ui-browser-address-bg: #1f2023;
+    --ui-browser-address-border: #3a3b40;
 }

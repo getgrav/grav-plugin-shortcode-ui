@@ -5,22 +5,22 @@
 .browser-frame {
   margin: 0 auto;
   display: inline-block;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--ui-browser-shadow, 0 10px 30px rgba(0, 0, 0, 0.2));
   border-radius: 4px;
-  border: 1px solid #ddd; }
+  border: 1px solid var(--ui-browser-border, #ddd); }
   .browser-frame .btoolbar {
     height: 40px;
-    background: #eee;
-    color: #bbb;
+    background: var(--ui-browser-toolbar-bg, #eee);
+    color: var(--ui-browser-toolbar-color, #bbb);
     border-radius: 4px 4px 0 0;
     position: relative;
-    border-bottom: 1px solid #ddd; }
+    border-bottom: 1px solid var(--ui-browser-border, #ddd); }
   .browser-frame .btoolbar-button {
     position: absolute;
     display: block;
     width: 12px;
     height: 12px;
-    background: #bbb;
+    background: var(--ui-browser-button-bg, #bbb);
     border-radius: 100%;
     top: 13px;
     left: 15px; }
@@ -34,9 +34,9 @@
     top: 5px;
     left: 84px;
     right: 84px;
-    background: #fff;
+    background: var(--ui-browser-address-bg, #fff);
     border-radius: 4px;
-    border: 1px solid #e9e9e9;
+    border: 1px solid var(--ui-browser-address-border, #e9e9e9);
     padding: 0 0.5rem;
     overflow: hidden;
     white-space: nowrap; }
@@ -56,3 +56,13 @@
     padding: 0 !important;
     border-radius: 0 0 4px 4px;
     display: block; }
+
+:root.dark .browser-frame,
+:root[data-theme="dark"] .browser-frame {
+  --ui-browser-border: #3a3b40;
+  --ui-browser-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --ui-browser-toolbar-bg: #26272b;
+  --ui-browser-toolbar-color: #a8a8a8;
+  --ui-browser-button-bg: #55565c;
+  --ui-browser-address-bg: #1f2023;
+  --ui-browser-address-border: #3a3b40; }
