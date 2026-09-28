@@ -1,5 +1,5 @@
 # v3.1.2
-## 09/27/2026
+## 09/28/2026
 
 1. [](#bugfix)
     * Tabs, accordions, browser frames, polaroids and callout tooltips now switch to dark colors on themes with a dark mode, such as Quark 2 and Typhoon, while light mode looks exactly as before, and their colors can be changed with `--ui-*` CSS variables ([#50](https://github.com/getgrav/grav-plugin-shortcode-ui/issues/50))
