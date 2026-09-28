@@ -60,6 +60,14 @@
     position: absolute;
 }
 
+// Pico CSS (Quark 2 and other Pico themes) draws its own CSS tooltip from any
+// [data-tooltip] attribute, which here printed the callout's raw HTML under
+// the real tooltip. The callouts use the ui-tooltips.js tooltip instead.
+.callout-item[data-tooltip]::before,
+.callout-item[data-tooltip]::after {
+    content: none;
+}
+
 .callout-marker {
     font-family: helvetica, arial, sans-serif;
     font-weight: bold;

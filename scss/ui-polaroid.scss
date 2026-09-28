@@ -1,4 +1,6 @@
 .polaroid-wrapper {
+  // Colors are custom properties so a theme can restyle the polaroid and so
+  // dark mode (below) can swap them. The fallbacks are the light colors.
 
     &.right {
         float: right;
@@ -10,10 +12,10 @@
   .polaroid {
     width: 300px;
     height: 360px;
-    background: #FAFAF9;
+    background: var(--ui-polaroid-bg, #FAFAF9);
 
-    box-shadow: 2px -2px 20px 0px rgba(0,0,0,0.1);
-    border: 1px solid #eee;
+    box-shadow: var(--ui-polaroid-shadow, 2px -2px 20px 0px rgba(0, 0, 0, 0.1));
+    border: 1px solid var(--ui-polaroid-border, #eee);
     -webkit-backface-visibility: hidden;
 
     & > p {
@@ -21,13 +23,14 @@
       bottom: 5px;
       padding: 15px 20px;
       margin: 0;
+      color: var(--ui-polaroid-caption-color, inherit);
     }
 
     .gloss {
       position: absolute;
       top: 0;
       left: 0;
-      background: linear-gradient(120deg, rgba(255,255,255,.6), transparent 70%, rgba(0,0,0,.1) 99%);
+      background: var(--ui-polaroid-gloss, linear-gradient(120deg, rgba(255, 255, 255, 0.6), transparent 70%, rgba(0, 0, 0, 0.1) 99%));
       box-shadow: inset 0 0 10px 1px rgba(0,0,0,0.1);
       width: 100%;
       height: 100%;
@@ -41,7 +44,7 @@
     left: 10px;
     width: 280px;
     height: 280px;
-    background: #eee;
+    background: var(--ui-polaroid-img-bg, #eee);
     overflow: hidden;
     img {
       margin: 0 !important;
@@ -59,7 +62,14 @@
   }
 }
 
-
-
-
-
+// Dark mode, when the theme flags it on <html> with a `dark` class or
+// `data-theme="dark"` (same keys and neutral palette as the tabs).
+:root.dark .polaroid-wrapper,
+:root[data-theme="dark"] .polaroid-wrapper {
+  --ui-polaroid-bg: #26272b;
+  --ui-polaroid-border: #3a3b40;
+  --ui-polaroid-shadow: 2px -2px 20px 0px rgba(0, 0, 0, 0.5);
+  --ui-polaroid-caption-color: #e6e6e6;
+  --ui-polaroid-gloss: linear-gradient(120deg, rgba(255, 255, 255, 0.15), transparent 70%, rgba(0, 0, 0, 0.2) 99%);
+  --ui-polaroid-img-bg: #1f2023;
+}

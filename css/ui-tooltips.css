@@ -1,8 +1,11 @@
 
+/* Colors are custom properties so a theme can restyle the tooltip and so
+   dark mode (at the end) can swap them. The fallbacks are the light colors. */
+
 #tooltip {
   padding: 20px;
   border-radius: 4px;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  box-shadow: var(--ui-tooltip-shadow, 0px 1px 10px rgba(0,0,0,0.3));
   max-width: 300px;
   display: none;
   position: absolute;
@@ -10,13 +13,13 @@
 }
 
 #tooltip.black {
-  background: rgba(0,0,0,0.9);
-  color: #fff;
+  background: var(--ui-tooltip-black-bg, rgba(0,0,0,0.9));
+  color: var(--ui-tooltip-black-color, #fff);
 }
 
 #tooltip.white {
-  background: rgba(255,255,255,0.9);
-  color: #222;
+  background: var(--ui-tooltip-white-bg, rgba(255,255,255,0.9));
+  color: var(--ui-tooltip-white-color, #222);
 }
 
 #tooltip .tooltip-header {
@@ -25,15 +28,15 @@
 }
 
 #tooltip.white .tooltip-header {
-    background: #f3f3f3;
-    color: #666;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background: var(--ui-tooltip-white-header-bg, #f3f3f3);
+    color: var(--ui-tooltip-white-header-color, #666);
+    border-bottom: 1px solid var(--ui-tooltip-white-header-border, rgba(0,0,0,0.1));
 }
 
 #tooltip.black .tooltip-header {
-    background: #222;
-    color: #ccc;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: var(--ui-tooltip-black-header-bg, #222);
+    color: var(--ui-tooltip-black-header-color, #ccc);
+    border-bottom: 1px solid var(--ui-tooltip-black-header-border, rgba(255,255,255,0.1));
 }
 
 #tooltip h4 {
@@ -55,5 +58,21 @@
     margin: 0;
 }
 
-
-
+/* Dark mode, when the theme flags it on <html> with a `dark` class or
+   data-theme="dark" (same keys and neutral palette as the tabs). The white
+   tooltip turns dark, because a dark theme colors headings and paragraphs
+   light and they would vanish on a white box. */
+:root.dark #tooltip,
+:root[data-theme="dark"] #tooltip {
+    --ui-tooltip-shadow: 0 0 0 1px #3a3b40, 0 4px 16px rgba(0,0,0,0.6);
+    --ui-tooltip-white-bg: rgba(38,39,43,0.97);
+    --ui-tooltip-white-color: #e6e6e6;
+    --ui-tooltip-white-header-bg: #1f2023;
+    --ui-tooltip-white-header-color: #a8a8a8;
+    --ui-tooltip-white-header-border: #3a3b40;
+    --ui-tooltip-black-bg: rgba(0,0,0,0.9);
+    --ui-tooltip-black-color: #e6e6e6;
+    --ui-tooltip-black-header-bg: #111;
+    --ui-tooltip-black-header-color: #a8a8a8;
+    --ui-tooltip-black-header-border: #3a3b40;
+}

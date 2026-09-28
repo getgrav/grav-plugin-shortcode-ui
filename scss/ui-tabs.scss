@@ -84,17 +84,20 @@ $tablet-container: 48.000em !default;
 
         }
     }
+    // Colors are custom properties so a theme can restyle the tabs and so
+    // dark mode (below) can swap them. The fallbacks are the light colors.
+
     // Default Theme
     &.ui-theme-default {
-        $main-bg: #ffffff;
-        $border-color: #e9e9e9;
+        $main-bg: var(--ui-tabs-bg, #ffffff);
+        $border-color: var(--ui-tabs-border, #e9e9e9);
         .tabs-nav {
             li {
                 a {
-                    background-color: darken($main-bg, 2%);
+                    background-color: var(--ui-tabs-nav-bg, #fafafa);
                     border: 1px solid $border-color;
                     &:hover {
-                        background: darken($main-bg, 4%);
+                        background: var(--ui-tabs-nav-hover-bg, whitesmoke);
                     }
                 }
                 &.current {
@@ -125,14 +128,8 @@ $tablet-container: 48.000em !default;
     }
     // Badges Theme
     &.ui-theme-badges {
-        $main-bg: #f9f9f9;
-        $border-color: darken($main-bg, 3%);
-        $badge-default: darken($main-bg,5%);
-        $badge-active: #666;
-        $badge-text: #fff;
-
-        background: $main-bg;
-        border: 1px solid $border-color;
+        background: var(--ui-tabs-badges-bg, #f9f9f9);
+        border: 1px solid var(--ui-tabs-badges-border, #f1f1f1);
         border-radius: 4px;
 
         .tabs-nav {
@@ -146,19 +143,19 @@ $tablet-container: 48.000em !default;
             li {
 
                 a {
-                    color: darken($main-bg,50%);
-                    background: $badge-default;
+                    color: var(--ui-tabs-badge-color, #7a7a7a);
+                    background: var(--ui-tabs-badge-bg, #ececec);
                     padding: 0.1rem 1rem;
                     border-radius: 4px;
 
                     &:hover {
-                        background: darken($badge-default, 8%);
+                        background: var(--ui-tabs-badge-hover-bg, #d8d8d8);
                     }
                 }
                 &.current {
                     a {
-                        color: $badge-text;
-                        background-color: $badge-active;
+                        color: var(--ui-tabs-badge-active-color, #fff);
+                        background-color: var(--ui-tabs-badge-active-bg, #666);
                     }
                 }
             }
@@ -180,18 +177,18 @@ $tablet-container: 48.000em !default;
 
     // Lite Theme
     &.ui-theme-lite {
-        $main-bg: #ffffff;
-        $border-color: #e9e9e9;
+        $border-color: var(--ui-tabs-border, #e9e9e9);
+        $active-border: var(--ui-tabs-lite-active-border, #909090);
         .tabs-nav {
             li {
                 &.current {
                     a {
                         font-weight: bold;
-                        border-bottom: 1px solid darken($border-color, 35%);
+                        border-bottom: 1px solid $active-border;
                     }
                 }
                 &:hover {
-                    background: darken($main-bg, 4%);
+                    background: var(--ui-tabs-nav-hover-bg, whitesmoke);
                 }
             }
 
@@ -203,7 +200,7 @@ $tablet-container: 48.000em !default;
                     &.current {
                         a {
                             border-bottom: 0;
-                            border-top: 1px solid darken($border-color, 35%);
+                            border-top: 1px solid $active-border;
                         }
                     }
                 }
@@ -217,7 +214,7 @@ $tablet-container: 48.000em !default;
 
         .tab {
             border-top: 1px solid $border-color;
-            background-color: $main-bg;
+            background-color: var(--ui-tabs-lite-bg, #ffffff);
 
             padding: 0.5rem 0;
             @media screen and (max-width: $tablet-container) {
@@ -229,4 +226,25 @@ $tablet-container: 48.000em !default;
             }
         }
     }
+}
+
+// Dark mode, when the theme flags it on <html> with a `dark` class (Typhoon,
+// Quark 2, Tailwind themes) or `data-theme="dark"` (Quark 2, Pico themes).
+// prefers-color-scheme alone is not used: a light-only theme would get dark
+// tabs on a white page.
+:root.dark .tabs-wrapper,
+:root[data-theme="dark"] .tabs-wrapper {
+    --ui-tabs-bg: #1f2023;
+    --ui-tabs-border: #3a3b40;
+    --ui-tabs-nav-bg: #26272b;
+    --ui-tabs-nav-hover-bg: #2e2f34;
+    --ui-tabs-badges-bg: rgba(255, 255, 255, 0.04);
+    --ui-tabs-badges-border: rgba(255, 255, 255, 0.08);
+    --ui-tabs-badge-color: #a8a8a8;
+    --ui-tabs-badge-bg: rgba(255, 255, 255, 0.08);
+    --ui-tabs-badge-hover-bg: rgba(255, 255, 255, 0.16);
+    --ui-tabs-badge-active-color: #111;
+    --ui-tabs-badge-active-bg: #d4d4d4;
+    --ui-tabs-lite-active-border: #a0a0a0;
+    --ui-tabs-lite-bg: transparent;
 }
